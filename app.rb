@@ -5,13 +5,13 @@ module FormsLab
   class App < Sinatra::Base
 
     # code other routes/actions here
-    get '/' do 
+    get '/' do
      "Welcome to the Nested Forms Lab!"
     end
 
     get '/new' do
 
-      erb :"pirates/new"
+      erb :"pirates/new/view"
     end
 
     post '/pirates' do
@@ -23,7 +23,7 @@ module FormsLab
         @ships = Ship.all
       # binding.pry
         erb :"pirates/show"
-    end       
+    end
 
   end
 end
